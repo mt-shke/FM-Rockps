@@ -20,14 +20,14 @@ const GameStart: React.FC<GameStartProps> = ({ state, dispatch }) => {
 	}, []);
 
 	return (
-		<main className="relative grid grid-cols-2 gap-4 justify-center w-5/6 my-24 font-barlow tracking-wider font-bold md:gap-0">
-			<div className="flex flex-col items-center gap-12 mx-auto">
+		<main className="relative grid grid-cols-2 gap-4 justify-center w-5/6 my-24 font-barlow tracking-wider font-bold md:flex md:items-start md:gap-0">
+			<div className="flex flex-col items-center gap-12 mx-auto md:w-2/6 md:mx-0">
 				<h2 className="whitespace-nowrap">YOU PICKED</h2>
 				<div className="mx-auto">
 					<Circle icon={state.player as GamePick} size="large" />
 				</div>
 			</div>
-			<div className="flex flex-col items-center gap-12 mx-auto">
+			<div className="flex flex-col items-center gap-12 mx-auto md:w-2/6 md:mx-0">
 				<h2 className="whitespace-nowrap">THE HOUSE PICKED</h2>
 				{!housePick && (
 					<div className="grid place-items-center h-full w-full">
